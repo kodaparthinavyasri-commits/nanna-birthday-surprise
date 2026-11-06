@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#8d1726" />
+<title>Happy Birthday Nanna 🦋🌷</title>
+<style>
+:root{--red:#8b3155;--deep:#59243e;--pink:#f3d7e6;--cream:#f7edf7;--gold:#e8c7d8;--ink:#493342}
+*{box-sizing:border-box} body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow-x:hidden}
+button,input{font:inherit}button{border:0;cursor:pointer} .hidden{display:none!important}
+.screen{min-height:100svh;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at top,#d8b6d5 0,#a66b98 48%,#59324f 100%);position:relative;overflow:hidden}
+.screen:before{content:"♥ ✦ ♥ ✧ ♥ ✦ ♥";position:absolute;top:8%;left:-8%;width:116%;color:#ffd9df22;font-size:clamp(30px,8vw,80px);letter-spacing:18px;transform:rotate(-12deg);pointer-events:none}
+.panel{width:min(100%,440px);background:#fffaf6;border:3px solid #ffc8d0;border-radius:28px;padding:28px 22px;text-align:center;box-shadow:0 18px 45px #2c071366;position:relative;z-index:1}
+.bears{font-size:54px;line-height:1.3}.eyebrow{color:#a52a3a;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.panel h1{font-family:Georgia,serif;color:var(--red);font-size:clamp(2rem,9vw,2.8rem);margin:8px 0}.panel p{line-height:1.65}.password{display:flex;gap:9px;margin-top:18px}.password input{min-width:0;flex:1;border:2px solid #f1aab5;border-radius:14px;padding:13px;text-align:center;letter-spacing:.25em;background:white}.primary{background:var(--red);color:white;border-radius:14px;padding:13px 18px;font-weight:800;box-shadow:0 5px 0 #59324f}.primary:active{transform:translateY(2px);box-shadow:0 3px 0 #4e0d18}.hint{font-size:.85rem;color:#9b6670}.error{color:#b0182b;font-weight:700;min-height:1.4em}
+#main{background:radial-gradient(ellipse at top,#fff8fc 0,#f1dfea 48%,#d8c0d9 100%);min-height:100svh}.hero{background:linear-gradient(145deg,#9c5e8d,#6d3d65);color:white;text-align:center;padding:34px 18px 42px;position:relative;overflow:hidden}.hero:after{content:"✦ ♥ ✦ ♥ ✦";position:absolute;bottom:8px;left:0;width:100%;color:#ffd36a88;letter-spacing:20px;font-size:20px}.hero .bears{font-size:60px}.hero h1{font-family:Georgia,serif;font-size:clamp(2.2rem,10vw,4rem);margin:5px 0;color:#fff0d8;text-shadow:2px 3px #4b0914}.hero p{max-width:520px;margin:8px auto;line-height:1.6}.tag{display:inline-block;background:#ffd9df;color:#771625;border-radius:99px;padding:7px 13px;font-size:.8rem;font-weight:800;margin-top:12px}
+.wrap{width:min(100% - 28px,760px);margin:0 auto;padding:22px 0 50px}.section{background:#fffaf6;border:2px solid #f5c2ca;border-radius:22px;padding:20px;margin:18px 0;box-shadow:0 8px 20px #8d172615}.section h2{font-family:Georgia,serif;color:var(--red);margin:0 0 12px;font-size:1.65rem}.sub{color:#96616a;font-size:.9rem;margin-top:-5px}.cake-area{text-align:center;padding:10px}.cake{font-size:88px;display:inline-block;cursor:pointer;filter:drop-shadow(0 5px 3px #a52a3a22);transition:transform .25s}.cake:active{transform:scale(1.12)}.cake-note{font-weight:700;color:#a52a3a}.letter{background:#fff0e4;border:1px dashed #d68c98;border-radius:16px;padding:18px;line-height:1.85;white-space:pre-line;font-family:Georgia,serif}.sign{font-weight:800;color:#a52a3a}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{aspect-ratio:1/1;background:#ffe5e8;border:2px dashed #d98a98;border-radius:15px;display:grid;place-items:center;overflow:hidden;position:relative}.photo img{width:100%;height:100%;object-fit:cover}.photo span{padding:12px;text-align:center;font-size:.85rem;color:#9c5360}.photo input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer}.gift-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.gift{background:#ffe3e7;border:2px solid #f1b2bd;border-radius:16px;padding:14px 7px;color:#761525;font-weight:800;min-height:120px}.gift .emoji{font-size:35px;display:block;margin-bottom:5px}.gift small{font-size:.75rem;display:block}.gift-message{margin-top:13px;padding:15px;border-radius:14px;background:#fff0e4;border:1px dashed #d68c98;line-height:1.6}.footer{text-align:center;color:#9a5965;font-size:.85rem;padding:10px 0 25px}.heart{color:#c62b47}.sprinkle{position:fixed;top:-20px;z-index:10;pointer-events:none;animation:fall 3.4s linear forwards;font-size:22px}@keyframes fall{to{transform:translateY(110svh) rotate(360deg);opacity:.15}}
+@media(max-width:360px){.panel{padding:23px 15px}.password{flex-direction:column}.gift-grid{gap:6px}.gift{padding:11px 4px}.gift small{font-size:.68rem}}
+
+/* Scrapbook-style pages inspired by your references */
+.page-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0}
+.page-btn{background:linear-gradient(135deg,#a66b98,#754568);color:#fff;border:2px solid #f3a8b6;border-radius:16px;padding:13px 10px;font-weight:800;box-shadow:0 5px 0 #59324f}
+.page-btn.active{background:#f7e5f0;color:#754568;box-shadow:0 0 0 3px #e8c7d8}
+.scrap-page{display:none;animation:pageIn .35s ease}.scrap-page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.reason-list{display:grid;gap:9px}.reason{display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#8f1527,#b92a3c);color:#fff;border-radius:13px;padding:11px 13px;box-shadow:0 3px 0 #5b0d19}
+.reason b{display:grid;place-items:center;flex:0 0 28px;height:28px;background:#ffe4e7;color:#8d1726;border-radius:50%}.reason span{font-size:.93rem;line-height:1.4}
+.music-card{background:radial-gradient(circle at 20% 10%,#f7c9d9,#d88aa9 45%,#8d1726 100%);color:#fff;border-radius:20px;padding:22px;text-align:center;box-shadow:inset 0 0 0 2px #ffffff55}
+.music-card .record{font-size:70px;display:inline-block;animation:spin 7s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.music-card audio{width:100%;margin:12px 0}.music-card input[type=file]{max-width:100%;background:#fff;color:#7b1526;border-radius:10px;padding:8px}
+.rose-page{background:radial-gradient(ellipse at top,#fff7fc 0,#f0ddeb 48%,#d7b9d4 100%);border:2px solid #cda8c9}.rose-page h2{color:#8b3155}.rose-page .letter{background:#fff8fb;border-color:#c98ca8}
+#main{background-color:#fff9f7;background-image:linear-gradient(#f3dfe2 1px,transparent 1px),linear-gradient(90deg,#f3dfe2 1px,transparent 1px);background-size:28px 28px}
+@media(max-width:360px){.page-nav{gap:6px}.page-btn{font-size:.82rem;padding:11px 6px}}
+
+
+/* Cute bear sticker decorations for every scrapbook page */
+.section,.panel,.hero{position:relative;}
+.bear-sticker{position:absolute;z-index:2;display:grid;place-items:center;width:66px;height:66px;border-radius:48% 52% 46% 54%;background:linear-gradient(145deg,#fff8f4,#ffdce2);border:2px solid #f2a9b8;box-shadow:0 4px 0 #b85c6b44,0 5px 14px #68122222;font-size:35px;transform:rotate(-8deg);pointer-events:none;}
+.bear-sticker::after{content:attr(data-hearts);position:absolute;font-size:15px;right:-7px;top:-9px;letter-spacing:-3px;}
+.sticker-top-right{top:8px;right:8px}.sticker-bottom-left{bottom:8px;left:8px;transform:rotate(7deg)}
+.hero .bear-sticker{width:76px;height:76px;top:10px;right:12px;background:#ffe8ed;border-color:#ffd0d8}
+.panel .bear-sticker{width:58px;height:58px;font-size:30px;bottom:8px;right:8px}
+.rose-page .bear-sticker{background:#fff0f7;border-color:#d99db8}
+.reason-list .reason:nth-child(odd){padding-right:54px}
+.reason-list .reason:nth-child(odd)::after{content:'🐻';position:absolute;right:14px;font-size:23px}
+.reason{position:relative}
+.music-card{position:relative;padding-bottom:76px}
+.music-card::after{content:'🐻‍❄️ 💗 🐻';position:absolute;bottom:10px;left:0;width:100%;font-size:30px;letter-spacing:3px}
+.photo{background-image:radial-gradient(#fff 1px,transparent 1px);background-size:12px 12px}
+.gift{position:relative;overflow:hidden}.gift::after{content:'🐻';position:absolute;right:3px;bottom:2px;font-size:18px;opacity:.9}
+@media(max-width:420px){.bear-sticker{width:52px;height:52px;font-size:28px}.hero .bear-sticker{width:56px;height:56px;font-size:30px}}
+
+
+/* Coordinated soft-lavender photo/check boxes */
+.photo{background:linear-gradient(145deg,#f8eaf7 0%,#ead8ef 52%,#f9e4ee 100%);border:2px dashed #b78dbd;box-shadow:inset 0 0 0 4px #fff8fc,0 4px 12px #8b5c8b18;color:#754568}
+.photo span{color:#79517e;font-weight:600;text-shadow:0 1px #fff}
+.photo input{accent-color:#a66b98}
+input[type=checkbox]{accent-color:#a66b98;width:1.15em;height:1.15em;cursor:pointer}
+input[type=checkbox]:focus-visible,.photo:focus-within{outline:3px solid #d6a6d2;outline-offset:3px}
+.gift{background:linear-gradient(145deg,#f8e5f1,#e8d4eb);border-color:#c7a0c9;color:#754568}
+.gift-message{background:#f8edf7;border-color:#c7a0c9}
+
+
+/* Matching pastel backdrop for the home-page wish and gift panels */
+.wish-panel{background:linear-gradient(135deg,#ead4e9 0%,#f3dce9 52%,#e3c6e0 100%);border-color:#c99bc9}
+.surprises-panel{background:linear-gradient(135deg,#e8cfe7 0%,#f2d9e9 48%,#dcb9d8 100%);border-color:#c393c3}
+.wish-panel .cake-note{color:#7c456f}
+.surprises-panel .gift{background:linear-gradient(145deg,#f9e8f5,#e7cce8);border-color:#bd91c2;color:#603c63}
+.surprises-panel .gift small{color:#815d83}
+
+.photo img{display:block;width:100%;height:100%;object-fit:cover}.photo:has(img){background:#ead8ef;border-style:solid}
+</style>
+</head>
+<body>
+<section id="lock" class="screen">
+ <div class="panel"><span class="bear-sticker" data-hearts="♥ ✦">🐻‍❄️</span>
+  <div class="bears">🐻‍❄️ 💗 🐻</div><div class="eyebrow">A tiny surprise made just for you</div>
+  <h1>Hey, Nanna! 🦋🌷</h1>
+  <p>Someone who means so much to me has a birthday…<br>Can you unlock your little surprise? 🎁</p>
+  <div class="password"><input id="pass" type="password" inputmode="numeric" maxlength="12" placeholder="Enter passcode" aria-label="Passcode"><button class="primary" onclick="unlock()">Unlock 💌</button></div>
+  <div id="error" class="error" aria-live="polite"></div><div class="hint">Hint: a little 4-digit secret 🫣🤭😜</div>
+ </div>
+</section>
+<main id="main" class="hidden">
+ <header class="hero"><span class="bear-sticker" data-hearts="♥">🐻</span><div class="bears">🐻‍❄️💗🐻</div><div class="eyebrow" style="color:#ffd9df">To my favorite human</div><h1>Happy Birthday<br>Nanna! 🦋🌷</h1><p>to my unpaid therapist..🩷🤗my brother by heart.<br>Today is all about you and enjoy your day 😜🎂</p><span class="tag">Our bond • Our chaos • Our memories</span></header>
+ <div class="wrap">
+  <nav class="page-nav" aria-label="Birthday pages">
+   <button class="page-btn active" onclick="showPage('home',this)">🏠 Menu</button>
+   <button class="page-btn" onclick="showPage('gift1',this)">💌 Gift 1</button>
+   <button class="page-btn" onclick="showPage('gift2',this)">❤️ Gift 2</button>
+   <button class="page-btn" onclick="showPage('gift3',this)">📸 Gift 3</button>
+   <button class="page-btn" onclick="showPage('song',this)">🎵 Song</button>
+  </nav>
+  <div id="page-home" class="scrap-page active">
+
+  <section class="section wish-panel"><span class="bear-sticker sticker-top-right" data-hearts="♥">🐻‍❄️</span><h2>🎂 Make a little wish</h2><p class="sub">Tap the cake to light your birthday magic!</p><div class="cake-area"><div class="cake" id="cake" role="button" tabindex="0" aria-label="Tap cake to make a wish" onclick="wish()" onkeydown="if(event.key==='Enter'||event.key===' '){wish()}">🎂</div><div id="wishText" class="cake-note">Tap me, birthday boy! ✨</div></div></section>
+  <section class="section surprises-panel"><span class="bear-sticker sticker-top-right" data-hearts="♥">🐻‍❄️</span><h2>🎁 Your three surprises</h2><p class="sub">Each gift opens its own special page. Pick one, birthday boy! 🦋</p><div class="gift-grid">
+   <button class="gift" onclick="showPage('gift1')"><span class="emoji">💌</span>Gift 1<small>Letter</small></button>
+   <button class="gift" onclick="showPage('gift2')"><span class="emoji">❤️</span>Gift 2<small>10 Reasons</small></button>
+   <button class="gift" onclick="showPage('gift3')"><span class="emoji">📸</span>Gift 3<small>Our Memories</small></button>
+  </div></section>
+  <section class="section" style="text-align:center"><span class="bear-sticker sticker-bottom-left" data-hearts="♥">🐻</span><h2>One last thing… ❤️</h2><p>Thank you for being my chosen family, my partner in crime, and my forever Nanna.</p><button class="primary" onclick="finalSurprise()">A final hug 🫂</button><div id="finalText" class="gift-message hidden">Sending you the biggest virtual hug! 🫂💗<br>Happy birthday, Nanna! 🦋🌷</div></section>
+  <div class="footer">Made with lots of love, just for my world 🌎<span class="heart">♥</span></div>
+  </div><!-- home page -->
+  <section id="page-gift1" class="scrap-page section rose-page"><span class="bear-sticker sticker-top-right" data-hearts="♥">🐻‍❄️</span>
+   <h2>💌 Gift 1 — A Letter for special person ♾️</h2><p class="sub">A little piece of my heart, just for Nanna 🦋🌷</p>
+   <div class="letter">Happy birthday, Nanna! 🥹❤️
+
+To My most favourite human 💞 
+
+Happy Birthday to my special person in my life🌷🦋 my brother💖my favourite prsn! ❤️🥹
+
+Sometimes I wonder how a person who was once a complete stranger can become such an important part of our life. If someone had told me on the day I first saw you that you would become one of the most precious people in my life, I would have laughed and never believed them.😜
+
+I still remember the first time I saw you on the bus. You were sitting in such a weird position that I thought you were some funny guy🤣🤭 I just laughed and moved on with my day, never knowing that the same person would one day become my family, my happiness, my comfort, and one of the biggest blessings of my life.💘
+
+Then, somehow, we found your Instagram ID and started talking to you. You asked Sruthi to set you up with some nice girl😁and we came up with the idea of pranking you. That's how I started talking to you. 😂❤️
+
+Who would have thought that a small prank would turn into such a beautiful relationship?
+
+Initially, we started talking like a nrml ppl but slowly, without even realizing it, we started trusting each other.💓 We shared our stories, our problems, our sadness, our happiness, and everything that was happening in our lives. Day by day, our bond became stronger and stronger. We went from being strangers to becoming people who genuinely cared about each other.🦋🌷
+
+And today, when I look back at everything, I feel so happy that I got you in my life♾️
+
+You know, one of the most beautiful things about our relationship is the way you treat me. You treat me like your own mother💞, and honestly, I feel like you are my home ❤️✨ You care for me, love me, scold me, pamper me, support me, and treat me like a little child.💖🥰
+
+You always encourage me when I feel low. You motivate me when I lose confidence. You stand beside me even during my lowest moments. You listen to my problems, understand my feelings, and make me feel like I am not alone in this world.🤗
+
+Sometimes, you scold me like I have done the biggest mistake in the world, and sometimes, you pamper me like I am the most innocent child ever. 😂❤️
+
+But behind every scolding, I know there is care. Behind every argument, I know there is love. And behind every little thing you do for me, I can feel how much I matter to you💟👣
+
+We have shared so many beautiful moments together. So many memories, so many laughs, so many silly conversations, and so many little things that may look ordinary to others but mean everything to me💌
+
+We have enjoyed so many moments of life together🫂 We have shared things that we probably would never have shared with anyone else. We have missed each other, waited for each other, and found happiness in the smallest moments😚
+
+And the funniest part is that we fight like two dogs. 😂 We argue over the smallest things, irritate each other, get angry, and sometimes stop talking for more than two days over some silly issue😫
+
+There have been moments when I thought we would never talk again because of how badly we argued. But somehow, no matter how angry we get, no matter how bad the situation becomes, we always find our way back to each other🤗
+
+And I think that is what makes our bond so special.💓
+
+We don't have to be perfect. We don't have to agree on everything. We can fight, misunderstand each other, get angry, and still choose to stay in each other's lives✨
+
+Because at the end of the day, you are not just someone I talk to. You are someone I genuinely cannot imagine losing from my life💖
+
+Now, we are studying in the same college, and somehow, life has given us another chance to create more memories together. Even though we are from different departments and different blocks, we still find our little moments🫣🦋💌
+
+You dropping me at the bus stop, our random conversations, our little walks,laughing over silly things, and enjoying those small moments together have become some of my favourite memories.🙈
+
+Honestly, I never thought that the person I first saw on a bus would one day become someone I would look forward to meeting every day♾️
+
+Every little moment spent with you feels so precious to me. Sometimes, I wish I could pause time and stay in those moments a little longer because I know that one day, these ordinary days will become beautiful memories that we will look back on with a smile.🥺🦋💖
+
+Maybe someday, we will be busy with our own lives, our careers, our responsibilities, and our own journeys. Maybe we won't get to meet every day like we do now. Maybe our daily bus stop moments, ice creams, pizzas, fights, and random conversations will become memories of our college days.😘💘
+
+But I hope that no matter how much life changes, our bond never changes.🤗
+
+I hope we always find time for each other. I hope we never become strangers again. I hope we continue to share our happiness, our problems, our achievements, and even our smallest daily stories.❤️‍🩹🫀
+
+And most importantly, I hope you always remember that you have someone in your life who genuinely loves you and cares about you.👣💟
+
+You may not be my blood-related brother, but honestly, that has never mattered to me.💌🌷
+
+Because family is not always about sharing the same blood. Sometimes, family is the person who makes you feel safe, understood, loved, and accepted.🩷
+
+And for me, you are that person.
+
+You feel like home.🩵
+
+You are the brother I never knew I needed, the person who makes me feel like a child again, the person who takes care of me in his own way, and the person who has given me so many beautiful memories that I will always cherish.😘🦋
+
+I am genuinely thankful to you for everything.❤️‍🩹
+
+Thank you for coming into my life unexpectedly.🌷
+
+Thank you for being patient with me, even when I irritate you.💟
+
+Thank you for listening to my endless stories👣.
+
+Thank you for supporting me when I feel like giving up.♾️
+
+Thank you for motivating me, encouraging me, and believing in me.🩵
+
+Thank you for scolding me when I need it and pampering me when I deserve it. 😂❤️
+
+Thank you for all the little things you do that you probably don't even realize mean so much to me.💖
+
+Thank you for making my college life more beautiful.🤗
+
+Thank you for all the laughter, all the memories, all the fights, all the random moments, and all the love that you have given me.😚
+
+And thank you for being YOU.💘
+
+I may not always express my feelings properly. Sometimes I get angry, sometimes I argue, sometimes I act stubborn, and sometimes I say things without thinking. But please never think that those little fights can change how much I care about you.🦋✨
+
+You are genuinely one of the most precious person in my life, and I am so lucky that our paths crossed.❤️‍🩹
+
+On your birthday, I wish you nothing but happiness, peace, success, good health, and all the beautiful things you deserve.💓
+
+I hope all your dreams come true. I hope you achieve everything you have been working for. I hope life gives you countless reasons to smile. And I hope you always have people around you who love you, understand you, and support you just the way you deserve.💟👣
+
+Whenever life gets difficult, I hope you remember that you don't have to face everything alone.🦋
+
+You have me too, your little sister, who will always be there to irritate you, fight with you, argue with you, laugh with you, and care about you in her own crazy way. 😂❤️
+
+And please, no matter how much we grow up, never stop treating me like your little child. Never stop scolding me, pampering me, and taking care of me. Because honestly, I love that part of our relationship so much.🫂
+
+I don't know what I did to deserve a brother like you, but I am genuinely grateful that life gave me you.💜
+
+Maybe we were meant to meet. Maybe that random day on the bus was the beginning of something beautiful that neither of us expected.🫀🌷
+
+And if I could go back to that day, I would still laugh at you, move on, and let everything happen exactly the way it happened. Because I know that somehow, that funny stranger would become my favourite person.🫣🤭💘✨
+
+Happy Birthday once again nanna❤️‍🩹🌷✨ my father-like protector, my partner in fights, my favourite person to irritate, and my forever family. ❤️🥹
+
+No matter where life takes us, I hope we always remain the same two idiots who can fight over the smallest things and still find their way back to each other.🩷
+
+You are not just a part of my college memories.💌
+
+You are a part of my life, my happiness, and my heart.🦋
+
+And I will always be thankful for the beautiful bond we share.🩵
+
+Love you so much Annayya😘😘❤️
+
+Forever your little sister,
+who loves you, fights with you, irritates you, and will never stop being your little child. 🫂❤️
+
+<strong>Happy birthday, my favorite idiot! 😂🦋</strong>
+I love you more than I say.😚 Always your sister from another mother. 🌷</div>
+   <section class="section" style="margin:16px 0 0;padding:15px"><h2>📸 Our little photo gallery</h2><p class="sub"><div class="photo-grid">
+   <div class="photo"><img src="photo1.jpg" alt="Our favorite memory"></div>
+   <div class="photo"><img src="photo2.jpg" alt="Our silly moment"></div>
+   <div class="photo"><img src="photo3.jpg" alt="One unforgettable day"></div>
+   <div class="photo"><img src="photo4.jpg" alt="Forever us"></div>
+   </div></section><button class="primary back-btn" onclick="showPage('home')">↩ Back to surprise menu</button>
+  </section>
+  <section id="page-gift2" class="scrap-page section rose-page"><span class="bear-sticker sticker-top-right" data-hearts="♥">🐻</span>
+   <h2>❤️ Gift 2 — 10 Reasons You're Special</h2><p class="sub">Ten little reminders for my favorite Annayya 💖🦋🌷</p>
+   <div class="reason-list">
+    <div class="reason"><b>1</b><span>You care about me even when I don't say what I need.💟</span></div><div class="reason"><b>2</b><span>You make ordinary moments feel like memories👣.</span></div><div class="reason"><b>3</b><span>You always find a way to make me laugh😂.</span></div><div class="reason"><b>4</b><span>You support me, even when I am being stubborn🫣.</span></div><div class="reason"><b>5</b><span>Our silly fights somehow become our funniest stories😘.</span></div><div class="reason"><b>6</b><span>You make me feel like I have family wherever I go💌.</span></div><div class="reason"><b>7</b><span>You listen and understand me in your own special way🥰</span></div><div class="reason"><b>8</b><span>You are my partner in crime and chaos 😂</span></div><div class="reason"><b>9</b><span>You never stop being someone I can count on🦋</span></div><div class="reason"><b>10</b><span>Because you are simply you—and that is more than enough. ❤️</span></div>
+   </div>
+   <section class="section" style="margin:16px 0 0;padding:15px"><h2>📸 A photo with these reasons</h2><p class="sub">One favorite picture...🤭🦋🤗</p><div class="photo-grid">
+    <div class="photo"><img src="photo5.jpg" alt="My favorite Nanna"></div>
+   </div></section>
+   <button class="primary back-btn" onclick="showPage('home')">↩ Back to surprise menu</button>
+  </section>
+  <section id="page-gift3" class="scrap-page section rose-page"><span class="bear-sticker sticker-top-right" data-hearts="♥">🐻‍❄️</span>
+   <h2>📸 Gift 3 — Our Little Memories</h2><p class="sub">A page for the silly, sweet, unforgettable moments that belong to us.</p>
+   <div class="photo-grid">
+   <div class="photo"><img src="photo6.jpg" alt="Our favorite memory"></div>
+   <div class="photo"><img src="photo7.jpg" alt="Our silly moment"></div>
+   <div class="photo"><img src="photo8.jpg" alt="One unforgettable day"></div>
+   <div class="photo"><img src="photo9.jpg" alt="Forever us"></div>
+   </div><div class="letter" style="margin-top:15px">Some memories are tiny, some are silly, and some are impossible to explain—but every one of them reminds me how lucky I am to have you in my life.💘❤️‍🩹🌷
+
+Thank you for being my chosen family. Here's to more photos, more laughter, more adventures, and more years of our beautiful bond. 🌷❤️</div>
+   <button class="primary back-btn" onclick="showPage('home')">↩ Back to surprise menu</button>
+  </section>
+  <section id="page-song" class="scrap-page section rose-page"><span class="bear-sticker sticker-bottom-left" data-hearts="✦">🐻</span>
+   <h2>🎵 A Song Just for You</h2><p class="sub">Choose a song from your phone and play it while reading your birthday message 💗</p>
+   <div class="music-card"><div class="record">💿</div><h3>Our little birthday soundtrack</h3><p>Pick a song that reminds you of our bond.</p>
+    <audio id="songPlayer" controls preload="metadata"><source src="birthday-song.mp3" type="audio/mpeg">Your browser does not support audio.</audio><div id="songName" style="font-size:.85rem">Tap play for our birthday song 🎶</div>
+   </div><div class="letter" style="margin-top:15px;text-align:center">If this song ever plays when we're apart, remember that you're loved, appreciated, and always my Nanna. 🫂🦋</div>
+   <button class="primary back-btn" onclick="showPage('home')">↩ Back to surprise menu</button>
+  </section>
+  </div>
+</main>
+<script>
+const PASSWORD='0108';
+function unlock(){const val=document.getElementById('pass').value;const error=document.getElementById('error');if(val===PASSWORD){document.getElementById('lock').classList.add('hidden');document.getElementById('main').classList.remove('hidden');sprinkles();}else{error.textContent='Oopsie! That passcode is not right. Try again 💗';document.getElementById('pass').value='';}}
+document.getElementById('pass').addEventListener('keydown',e=>{if(e.key==='Enter')unlock()});
+let wished=false;function wish(){if(wished)return;wished=true;document.getElementById('cake').textContent='🕯️🎂🕯️';document.getElementById('wishText').textContent='Wish made! May all your dreams come true, Nanna! ✨💗';sprinkles();}
+const gifts=["You deserve every good thing this world has to offer. I’m always cheering for you, even when I annoy you. ❤️","Your smile makes ordinary days better. Keep being your funny, caring, wonderfully chaotic self. 😂🌷","No matter how many silly fights we have, you’ll always be my brother from another mother. Forever us. 🫂🦋"];
+function openGift(i){const box=document.getElementById('giftMessage');box.textContent=gifts[i];box.classList.remove('hidden');sprinkles();}
+function finalSurprise(){document.getElementById('finalText').classList.remove('hidden');sprinkles();}
+function loadPhoto(input,index){const file=input.files&&input.files[0];if(!file)return;const reader=new FileReader();reader.onload=e=>{const label=input.parentElement;let img=label.querySelector('img');if(!img){img=document.createElement('img');label.appendChild(img);}img.src=e.target.result;label.querySelector('span').style.display='none';};reader.readAsDataURL(file);}
+function showPage(name,button){
+ document.querySelectorAll('.scrap-page').forEach(p=>p.classList.remove('active'));
+ const page=document.getElementById('page-'+name);if(page)page.classList.add('active');
+ document.querySelectorAll('.page-btn').forEach(b=>b.classList.remove('active'));
+ if(button)button.classList.add('active');else{const map={home:0,gift1:1,gift2:2,gift3:3,song:4};const btns=document.querySelectorAll('.page-btn');if(btns[map[name]])btns[map[name]].classList.add('active');}
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function loadSong(input){const file=input.files&&input.files[0];if(!file)return;const player=document.getElementById('songPlayer');player.src=URL.createObjectURL(file);document.getElementById('songName').textContent='Now ready: '+file.name+' 🎶';player.load();}
+function sprinkles(){const items=['💗','✨','🌷','🦋','♥'];for(let i=0;i<18;i++){const el=document.createElement('span');el.className='sprinkle';el.textContent=items[Math.floor(Math.random()*items.length)];el.style.left=Math.random()*100+'vw';el.style.animationDelay=Math.random()*1.2+'s';document.body.appendChild(el);setTimeout(()=>el.remove(),4800);}}
+</script>
+</body>
+</html>
